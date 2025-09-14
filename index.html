@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="block">
+            <h2>Генератор паролей</h2>
+
+            <div class="output">
+                <p id="output-field"></p>
+            </div>
+
+            <div class="setting-block">
+                <p class="lenght-subtitle"></p>
+                <div class="lenght">
+                    <input type="range" min="0" max="16" value="8" id="range-input" />
+                </div>
+
+                <div class="main-seting">
+                    <div class="setting-item">
+                        <p>Заглавные буквы</p>
+                        <div class="switch-btn">
+                        <label class="switch">
+                            <input id="uppercase-checkbox" type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                        </div>
+                    </div>
+                    <div class="setting-item">
+                        <p>Цифры</p>
+                        <div class="switch-btn">
+                        <label class="switch">
+                            <input id="numbers-checkbox" type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                        </div>
+                    </div>
+                    <div class="setting-item">
+                        <p>Символы</p>
+                        <div class="switch-btn">
+                        <label class="switch">
+                            <input id="symbols-checkbox" type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-btn" ><button onclick="getRandomPassword(parseInt(rangeInput.value))">Сгенерировать пароль</button></div>
+
+        </div>
+
+    </div>
+
+
+<script src="app.js"></script>
+</body>
+
+</html>
